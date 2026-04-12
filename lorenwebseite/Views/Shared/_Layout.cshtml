@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Loren Flowers</title>
+    <script>
+        (function () {
+            var storedTheme = localStorage.getItem("theme");
+            var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+            var theme = storedTheme || (prefersDark ? "dark" : "light");
+            document.documentElement.setAttribute("data-theme", theme);
+        })();
+    </script>
+    <script type="importmap"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lorenwebseite.styles.css" asp-append-version="true" />
+</head>
+<body class="site-shell">
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg site-nav">
+            <div class="container site-container">
+                <a class="navbar-brand site-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <span class="site-brand-mark">✿</span>
+                    <span>
+                        <strong>Loren Flowers</strong>
+                        <small>Floristik mit Herz</small>
+                    </span>
+                </a>
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Navigation umschalten">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNavigation">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                        <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "Home")#start">Start</a></li>
+                        <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "Home")#angebote">Angebote</a></li>
+                        <li class="nav-item"><a class="nav-link" href="@Url.Action("Index", "Home")#ueber-uns">Über uns</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://loren-flowers.shop/Home/Contact" target="_blank" rel="noreferrer">Kontakt</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://loren-flowers.shop/Home/Privacy" target="_blank" rel="noreferrer">Datenschutz</a></li>
+                        <li class="nav-item">
+                            <button type="button" class="theme-toggle" id="themeToggle" aria-label="Dark Mode umschalten" aria-pressed="false">
+                                <span class="theme-toggle-icon theme-toggle-icon-sun" aria-hidden="true">☀️</span>
+                                <span class="theme-toggle-icon theme-toggle-icon-moon" aria-hidden="true">🌙</span>
+                            </button>
+                        </li>
+                        <li class="nav-item ms-lg-2">
+                            <a class="btn btn-shop" href="https://loren-flowers.shop" target="_blank" rel="noreferrer">Zum Shop</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <footer class="site-footer">
+        <div class="container site-container">
+            <div>
+                <div class="footer-brand">Loren Flowers</div>
+                <p class="footer-copy">Moderne Blumenkunst für Alltag, Feste und besondere Momente.</p>
+            </div>
+            <div class="footer-links">
+                <a href="@Url.Action("Index", "Home")#angebote">Angebote</a>
+                <a href="@Url.Action("Index", "Home")#ueber-uns">Über uns</a>
+                <a href="https://loren-flowers.shop/Home/Contact" target="_blank" rel="noreferrer">Kontakt</a>
+                <a href="https://loren-flowers.shop" target="_blank" rel="noreferrer">Shop</a>
+                <a href="https://loren-flowers.shop/Home/Privacy" target="_blank" rel="noreferrer">Datenschutz</a>
+                <a href="https://loren-flowers.shop/Home/Impressum" target="_blank" rel="noreferrer">Impressum</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

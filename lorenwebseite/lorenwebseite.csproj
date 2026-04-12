@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!-- Keine vorkomprimierten .br/.gz Dateien im Publish-Output -->
+    <StaticWebAssetGzipCompressionEnabled>false</StaticWebAssetGzipCompressionEnabled>
+    <StaticWebAssetBrotliCompressionEnabled>false</StaticWebAssetBrotliCompressionEnabled>
+  </PropertyGroup>
+
+  <!-- Sicherheitsnetz: entferne .br und .gz falls doch erzeugt -->
+  <Target Name="RemoveCompressedStaticFiles" AfterTargets="Publish">
+    <ItemGroup>
+      <_CompressedFiles Include="$(PublishDir)wwwroot\**\*.br" />
+      <_CompressedFiles Include="$(PublishDir)wwwroot\**\*.gz" />
+    </ItemGroup>
+    <Delete Files="@(_CompressedFiles)" />
+  </Target>
+
+</Project>

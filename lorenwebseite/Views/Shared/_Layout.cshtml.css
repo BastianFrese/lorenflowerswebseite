@@ -1,0 +1,7 @@
+﻿.site-header {
+  isolation: isolate;
+}
+
+.site-footer {
+  isolation: isolate;
+}
