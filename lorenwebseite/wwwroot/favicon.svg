@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Stems -->
+  <path d="M28 38 L30 54 L32 58" stroke="#4a7c3f" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M36 38 L34 54 L32 58" stroke="#4a7c3f" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M32 34 L32 58" stroke="#4a7c3f" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Leaves -->
+  <ellipse cx="24" cy="46" rx="5" ry="2.5" transform="rotate(-35 24 46)" fill="#5a9a4a"/>
+  <ellipse cx="40" cy="46" rx="5" ry="2.5" transform="rotate(35 40 46)" fill="#5a9a4a"/>
+  <!-- Red rose left -->
+  <circle cx="22" cy="24" r="7" fill="#c0392b"/>
+  <circle cx="22" cy="24" r="4" fill="#e74c3c"/>
+  <circle cx="22" cy="24" r="1.8" fill="#c0392b"/>
+  <!-- Sunflower center -->
+  <g transform="translate(32,16)">
+    <ellipse cx="0" cy="-7" rx="2.2" ry="4" fill="#f1c40f"/>
+    <ellipse cx="5" cy="-5" rx="2.2" ry="4" fill="#f1c40f" transform="rotate(45 0 0)"/>
+    <ellipse cx="7" cy="0" rx="2.2" ry="4" fill="#f1c40f" transform="rotate(90 0 0)"/>
+    <ellipse cx="5" cy="5" rx="2.2" ry="4" fill="#f1c40f" transform="rotate(135 0 0)"/>
+    <ellipse cx="0" cy="7" rx="2.2" ry="4" fill="#f1c40f" transform="rotate(180 0 0)"/>
+    <ellipse cx="-5" cy="5" rx="2.2" ry="4" fill="#f1c40f" transform="rotate(225 0 0)"/>
+    <ellipse cx="-7" cy="0" rx="2.2" ry="4" fill="#f1c40f" transform="rotate(270 0 0)"/>
+    <ellipse cx="-5" cy="-5" rx="2.2" ry="4" fill="#f1c40f" transform="rotate(315 0 0)"/>
+    <circle cx="0" cy="0" r="3.5" fill="#8B5E3C"/>
+  </g>
+  <!-- Red rose right -->
+  <circle cx="42" cy="24" r="7" fill="#c0392b"/>
+  <circle cx="42" cy="24" r="4" fill="#e74c3c"/>
+  <circle cx="42" cy="24" r="1.8" fill="#c0392b"/>
+  <!-- Small red bud top -->
+  <circle cx="27" cy="12" r="4" fill="#e74c3c"/>
+  <circle cx="27" cy="12" r="2" fill="#c0392b"/>
+  <!-- Small bud right -->
+  <circle cx="38" cy="28" r="3.5" fill="#e74c3c"/>
+  <circle cx="38" cy="28" r="1.8" fill="#c0392b"/>
+  <!-- Ribbon / wrap -->
+  <path d="M24 38 Q32 42 40 38 Q40 40 32 43 Q24 40 24 38Z" fill="#b9507f"/>
+</svg>

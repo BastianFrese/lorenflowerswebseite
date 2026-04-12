@@ -103,15 +103,10 @@ a {
   font-size: 0.82rem;
 }
 
-.site-brand-mark {
-  display: inline-grid;
-  place-items: center;
-  width: 2.75rem;
-  height: 2.75rem;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #fff, var(--accent));
-  box-shadow: 0 8px 24px rgba(185, 80, 127, 0.18);
-  font-size: 1.25rem;
+.site-brand-logo {
+  height: 3rem;
+  width: auto;
+  object-fit: contain;
 }
 
 .site-nav .container {
