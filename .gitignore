@@ -361,3 +361,9 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Build-Ausgaben (versehentlich eingecheckt) und Dev-Konfiguration
+publishcheck/
+publishcheck[0-9]/
+*.staticwebassets.endpoints.json
+appsettings.Development.json
